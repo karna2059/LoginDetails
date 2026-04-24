@@ -1,0 +1,99 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="registerform.aspx.cs" Inherits="LoginDetails.registerform" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table align="center">
+                <tr>
+                    <td>
+                        <h1>Register Form</h1>
+                    </td>
+                </tr>
+            </table>
+            <table align="center">
+                <tr>
+                    <td>
+                        <asp:Label ID="lblfirstname" runat="server" Text="firstname"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:TextBox ID="txtfirstname" runat="server" ></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="rfvfirstname" runat="server" ControlToValidate="txtfirstname" ErrorMessage="please enter username" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="revfirstname" runat="server" ControlToValidate="txtfirstname" ErrorMessage="please enter in alphabits" ValidationExpression="^[a-zA-Z]+$"></asp:RegularExpressionValidator>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label ID="lbllastname" runat="server" Text="lastname"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:TextBox ID="txtlastname" runat="server" ></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="rfvlastname" runat="server" ControlToValidate="txtlastname" ErrorMessage="please enter username" ForeColor="Red"></asp:RequiredFieldValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label ID="lblemail" runat="server" Text="email"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:TextBox ID="txtemail" runat="server" ></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="rfvemail" runat="server" ControlToValidate="txtemail" ErrorMessage="please enter email" ForeColor="Red"></asp:RequiredFieldValidator>
+
+
+                        <asp:RegularExpressionValidator ID="rfvemail1" runat="server" ControlToValidate="txtemail" ErrorMessage="please enter correctly" ForeColor="#993300" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label ID="lblpassword" runat="server" Text="password"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:TextBox ID="txtpassword" runat="server"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="rfvpassword" runat="server" ControlToValidate="txtpassword" ErrorMessage="please enter password" ForeColor="Red"></asp:RequiredFieldValidator>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label ID="lblconformpassword"  runat="server" Text="confrompassword"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:TextBox ID="txtconformpassword" runat="server"></asp:TextBox>
+
+                        <asp:RequiredFieldValidator ID="rfvconformpassword" runat="server" ControlToValidate="txtconformpassword" ErrorMessage="please enter password" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <asp:CompareValidator ID="cmvconformpassword" runat="server" ControlToValidate="txtconformpassword" ControlToCompare="txtpassword" ErrorMessage="please enter same password"></asp:CompareValidator>
+
+                        
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label ID="lblmobilenumber" runat="server" Text="mobile number"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:TextBox ID="txtmobilenumber" runat="server"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="rfvmobilenumber" runat="server" ControlToValidate="txtmobilenumber" ErrorMessage="please enter phonenumber" ForeColor="Red"></asp:RequiredFieldValidator>
+
+                        <asp:RegularExpressionValidator ID="revmobilenumber" runat="server" ControlToValidate="txtmobilenumber" ErrorMessage="please enter correct mobile number" ValidationExpression="^[0-9]{10}$" ForeColor="Red"></asp:RegularExpressionValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <asp:Button ID="btnbutton" runat="server" Text="submit" OnClick="btnbutton_Click" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+        </body>
+</html>
