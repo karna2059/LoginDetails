@@ -21,10 +21,26 @@ namespace LoginDetails
         {
             SqlConnection conn = new SqlConnection("Data Source=Luffy\\SQLEXPRESS;Initial Catalog=RegisterForm;Integrated Security=true;");
             conn.Open();
-            SqlCommand cmd = new SqlCommand(
-            "INSERT INTO register1 VALUES('" + txtfirstname.Text + "','" + txtlastname.Text + "','" + txtemail.Text + "','" + txtpassword.Text + "','" + txtconformpassword.Text + "','" + txtmobilenumber.Text + "')",
-            conn);
 
+            string gender = rdbmale.Checked ? "Male" : "Female";
+
+            string dob = ddlyear.SelectedValue + "-" + ddlmonth.SelectedValue + "-" + ddlday.SelectedValue;
+
+
+
+            string courses = "";
+            foreach (ListItem item in chkcourses.Items)
+            {
+                if (item.Selected)
+                {
+                    courses += item.Text + ",";
+                }
+            }
+
+
+            SqlCommand cmd = new SqlCommand(
+                         "INSERT INTO register1 VALUES('" + txtfirstname.Text + "','" + txtlastname.Text + "','" + txtemail.Text + "','" + txtpassword.Text + "','" + txtconformpassword.Text + "','" + txtmobilenumber.Text + "','" + courses + "','" + dob + "','" + gender + "')",
+                          conn);
 
             cmd.ExecuteNonQuery();
             Response.Write("register successful");

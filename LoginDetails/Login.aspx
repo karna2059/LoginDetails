@@ -30,9 +30,35 @@
                     </td>
                 </tr>
                 <tr>
-                    <td></td>
+                    <td>
+                        <asp:Button ID="btnupdate" runat="server" Text="update" OnClick="btnupdate_Click" />
+                    </td>
+                    <td>
+                        <asp:Button ID="btndelete" runat="server" Text="delete" />
+                    </td>
+                    <td>
+                        
+                    </td>
                     <td>
                         <asp:Button ID="btnsubmit" runat="server" Text="submit" OnClick="btnsubmit_Click" />
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <asp:Button ID="btnsearch" runat="server" Text="search" />
+
+                             <asp:TextBox ID="txtsearch" runat="server"></asp:TextBox>
+
+                        
+                   </td>
+                    
+                   
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <asp:DataGrid ID="grddata" runat="server"></asp:DataGrid>
                     </td>
                 </tr>
             </table>

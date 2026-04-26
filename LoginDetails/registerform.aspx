@@ -87,6 +87,90 @@
                     </td>
                 </tr>
                 <tr>
+                    <td>
+                        <asp:Label ID="lblgender" runat="server" Text="gender"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:RadioButton ID="rdbmale" runat="server" Text="male" />
+                        <asp:RadioButton ID="rdbfemale" runat="server" Text="Female" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label ID="lblcourses" runat="server" Text="courses"></asp:Label>
+                    </td>
+                    <td>
+                      <asp:CheckBoxList ID="chkcourses" runat="server">
+                          <asp:ListItem>java</asp:ListItem>
+                          <asp:ListItem>.Net</asp:ListItem>
+                          <asp:ListItem>Python</asp:ListItem>
+                          <asp:ListItem>c</asp:ListItem>
+                        </asp:CheckBoxList>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label ID="lbldob" runat="server" Text="DOB"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:DropDownList ID="ddlday" runat="server">
+                            <asp:ListItem>1</asp:ListItem>
+                            <asp:ListItem>2</asp:ListItem>
+                            <asp:ListItem>3</asp:ListItem>
+                            <asp:ListItem>4</asp:ListItem>
+                            <asp:ListItem>5</asp:ListItem>
+                            <asp:ListItem>6</asp:ListItem>
+                            <asp:ListItem>7</asp:ListItem>
+                            <asp:ListItem>8</asp:ListItem>
+                            <asp:ListItem>9</asp:ListItem>
+                            <asp:ListItem>10</asp:ListItem>
+                            <asp:ListItem>11</asp:ListItem>
+                            <asp:ListItem>12</asp:ListItem>
+                            <asp:ListItem>13</asp:ListItem>
+                            <asp:ListItem>14</asp:ListItem>
+                            <asp:ListItem>15</asp:ListItem>
+                            <asp:ListItem>16</asp:ListItem>
+                            <asp:ListItem>17</asp:ListItem>
+                            <asp:ListItem>18</asp:ListItem>
+                            <asp:ListItem>19</asp:ListItem>
+                            <asp:ListItem>20</asp:ListItem>
+                            <asp:ListItem>21</asp:ListItem>
+                            <asp:ListItem>22</asp:ListItem>
+                            <asp:ListItem>23</asp:ListItem>
+                            <asp:ListItem>24</asp:ListItem>
+                            <asp:ListItem>25</asp:ListItem>
+                            <asp:ListItem>26</asp:ListItem>
+                            <asp:ListItem>27</asp:ListItem>
+                            <asp:ListItem>28</asp:ListItem>
+                            <asp:ListItem>29</asp:ListItem>
+                            <asp:ListItem>30</asp:ListItem>
+                            <asp:ListItem>31</asp:ListItem>
+                        </asp:DropDownList>
+                        <asp:DropDownList ID="ddlmonth" runat="server">
+                            <asp:ListItem>01</asp:ListItem>
+                            <asp:ListItem>02</asp:ListItem>
+                            <asp:ListItem>03</asp:ListItem>
+                            <asp:ListItem>04</asp:ListItem>
+                            <asp:ListItem>05</asp:ListItem>
+                            <asp:ListItem>06</asp:ListItem>
+                            <asp:ListItem>07</asp:ListItem>
+                            <asp:ListItem>08</asp:ListItem>
+                            <asp:ListItem>09</asp:ListItem>
+                            <asp:ListItem>10</asp:ListItem>
+                            <asp:ListItem>11</asp:ListItem>
+                            <asp:ListItem>12</asp:ListItem>
+                        </asp:DropDownList>
+                        <asp:DropDownList ID="ddlyear" runat="server">
+                            <asp:ListItem>2000</asp:ListItem>
+                            <asp:ListItem>2001</asp:ListItem>
+                            <asp:ListItem>2002</asp:ListItem>
+                            <asp:ListItem>2003</asp:ListItem>
+                            <asp:ListItem>2004</asp:ListItem>
+                            <asp:ListItem>2005</asp:ListItem>
+                        </asp:DropDownList>
+                    </td>
+                </tr>
+                <tr>
                     <td></td>
                     <td>
                         <asp:Button ID="btnbutton" runat="server" Text="submit" OnClick="btnbutton_Click" />
