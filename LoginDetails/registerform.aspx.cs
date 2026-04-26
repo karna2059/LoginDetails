@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace LoginDetails
 {
@@ -45,6 +46,20 @@ namespace LoginDetails
             cmd.ExecuteNonQuery();
             Response.Write("register successful");
             conn.Close();
+            BindGridData();
         }
+
+        protected void BindGridData()
+        {
+            SqlConnection con = new SqlConnection("Data Source=Luffy\\SQLEXPRESS;Initial Catalog=RegisterForm;Integrated Security=true");
+            SqlDataAdapter da = new SqlDataAdapter("select * from  register1", con);
+            DataSet ds=new DataSet();
+            da.Fill(ds);
+            grddata.DataSource = ds;
+            grddata.DataBind();
+        }
+
+
+            
     }
 }

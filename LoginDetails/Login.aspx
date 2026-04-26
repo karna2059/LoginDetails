@@ -34,7 +34,7 @@
                         <asp:Button ID="btnupdate" runat="server" Text="update" OnClick="btnupdate_Click" />
                     </td>
                     <td>
-                        <asp:Button ID="btndelete" runat="server" Text="delete" />
+                        <asp:Button ID="btndelete" runat="server" Text="delete" OnClick="btndelete_Click" />
                     </td>
                     <td>
                         
@@ -46,7 +46,7 @@
                 <tr>
                     <td></td>
                     <td>
-                        <asp:Button ID="btnsearch" runat="server" Text="search" />
+                        <asp:Button ID="btnsearch" runat="server" Text="search" OnClick="btnsearch_Click" />
 
                              <asp:TextBox ID="txtsearch" runat="server"></asp:TextBox>
 

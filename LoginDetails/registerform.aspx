@@ -176,6 +176,11 @@
                         <asp:Button ID="btnbutton" runat="server" Text="submit" OnClick="btnbutton_Click" />
                     </td>
                 </tr>
+                <tr>
+                    <td>
+                        <asp:DataGrid ID="grddata" runat="server" ></asp:DataGrid>
+                    </td>
+                </tr>
             </table>
         </div>
     </form>
