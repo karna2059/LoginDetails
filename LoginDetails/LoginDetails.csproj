@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="griddata.aspx" />
+    <Content Include="gridview.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="registerform.aspx" />
     <Content Include="Web.config" />
@@ -79,6 +80,13 @@
     </Compile>
     <Compile Include="griddata.aspx.designer.cs">
       <DependentUpon>griddata.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gridview.aspx.cs">
+      <DependentUpon>gridview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gridview.aspx.designer.cs">
+      <DependentUpon>gridview.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

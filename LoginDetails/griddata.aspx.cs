@@ -17,8 +17,8 @@ namespace LoginDetails
             SqlDataAdapter da = new SqlDataAdapter("select * from Login1", con);
             DataSet ds = new DataSet();
             da.Fill(ds);
-            grdview.DataSource = ds;
-            grdview.DataBind();
+            grddata.DataSource = ds;
+            grddata.DataBind();
 
         }
 

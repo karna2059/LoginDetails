@@ -15,7 +15,6 @@ namespace LoginDetails
         {
             if (!IsPostBack)
             {
-                BindGridData();
                 SqlConnection con = new SqlConnection("Data Source=Luffy\\SQLEXPRESS;Initial Catalog=LatestDb;Integrated Security=true;");
                 SqlDataAdapter da = new SqlDataAdapter("select * from Login1", con);
                 DataSet ds = new DataSet();
@@ -87,9 +86,6 @@ namespace LoginDetails
        
 
        
-
-        
-
        
 
         protected void grdview_RowEditing1(object sender, GridViewEditEventArgs e)
@@ -122,16 +118,27 @@ namespace LoginDetails
             BindGridData();
         }
 
-        protected void grdview_PageIndexChanging(object sender, GridViewPageEventArgs e)
-        {
-            grdview.PageIndex = e.NewPageIndex;
-            BindGridData();
-        }
 
         protected void grdview_PageIndexChanging1(object sender, GridViewPageEventArgs e)
         {
             grdview.PageIndex = e.NewPageIndex;
             BindGridData();
+        }
+
+        protected void grdview_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            SqlConnection con = new SqlConnection("Data Source=Luffy\\SQLEXPRESS;Initial Catalog=LatestDb;Integrated Security=true;");
+            con.Open();
+
+            int uid = Convert.ToInt32(grdview.DataKeys[e.RowIndex].Value);
+
+            SqlCommand cmd = new SqlCommand("DELETE FROM Login1 WHERE uid = @uid", con);
+            cmd.Parameters.AddWithValue("@uid", uid);
+
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+            BindGridData(); 
         }
     }
 }

@@ -60,7 +60,7 @@
 
                     </td>
                     <td>
-                        <asp:GridView ID="grdview" runat="server" AllowPaging="true" PageSize="5" DataKeyNames="uid" AutoGenerateColumns="false" OnPageIndexChanging="grdview_PageIndexChanging1" OnRowCancelingEdit="grdview_RowCancelingEdit1" OnRowEditing="grdview_RowEditing1" OnRowUpdating="grdview_RowUpdating1" >
+                        <asp:GridView ID="grdview" runat="server" AllowPaging="true" PageSize="5" DataKeyNames="uid" AutoGenerateColumns="false" OnPageIndexChanging="grdview_PageIndexChanging1" OnRowCancelingEdit="grdview_RowCancelingEdit1" OnRowEditing="grdview_RowEditing1" OnRowUpdating="grdview_RowUpdating1" OnRowDeleting="grdview_RowDeleting" >
                             <Columns>
                                 <asp:TemplateField HeaderText="username">
                                     <ItemTemplate>
