@@ -180,7 +180,7 @@
                     <td>
                         <asp:GridView ID="grdview" runat="server" AllowPaging="true" PageSize="5" DataKeyNames="uid" AutoGenerateColumns="false" OnPageIndexChanging="grdview_PageIndexChanging" OnRowEditing="grdview_RowEditing" OnRowCancelingEdit="grdview_RowCancelingEdit" OnRowUpdating="grdview_RowUpdating" OnRowDeleting="grdview_RowDeleting">
                             <Columns>
-                                <asp:TemplateField>
+                                <asp:TemplateField HeaderText="Firstname">
                                     <ItemTemplate>
                                         <asp:Label ID="lblfirstname" runat="server" Text='<%# Bind("firstname") %>'></asp:Label>
                                     </ItemTemplate>
@@ -188,8 +188,8 @@
                                         <asp:TextBox ID="txtusername" runat="server" Text='<%# Bind("firstname") %>'></asp:TextBox>
                                     </EditItemTemplate>
                                 </asp:TemplateField>
-                                <asp:TemplateField>
-                                    <ItemTemplate>
+                                <asp:TemplateField HeaderText="Lastname">
+                                    <ItemTemplate >
                                         <asp:Label ID="lbllastname" runat="server" Text='<%# Bind("lastname") %>'></asp:Label>
                                     </ItemTemplate>
                                     <EditItemTemplate>
@@ -197,7 +197,7 @@
 
                                     </EditItemTemplate>
                                 </asp:TemplateField>
-                                <asp:TemplateField>
+                                <asp:TemplateField HeaderText="Email">
                                     <ItemTemplate>
                                         <asp:Label ID="lblemail" runat="server" Text='<%# Bind("email") %>'></asp:Label>
                                     </ItemTemplate>
@@ -205,7 +205,7 @@
                                         <asp:TextBox ID="txtemail" runat="server" Text='<%# Bind("email") %>'></asp:TextBox>
                                     </EditItemTemplate>
                                 </asp:TemplateField>
-                                <asp:TemplateField>
+                                <asp:TemplateField HeaderText="Password">
                                     <ItemTemplate>
                                         <asp:Label ID="lblpassword" runat="server" Text='<%# Bind("password") %>'></asp:Label>
                                     </ItemTemplate>
@@ -213,15 +213,15 @@
                                         <asp:TextBox ID="txtpassword" runat="server" Text='<%# Bind("password") %>'></asp:TextBox>
                                     </EditItemTemplate>
                                 </asp:TemplateField>
-                                <asp:TemplateField>
-                                    <ItemTemplate>
+                                <asp:TemplateField HeaderText="conformpassword">
+                                    <ItemTemplate >
                                         <asp:Label ID="lblconformpasswoed" runat="server" Text='<%# Bind("conformpassword") %>'></asp:Label>
                                     </ItemTemplate>
                                     <EditItemTemplate>
                                         <asp:TextBox ID="txtconfrompassword" runat="server" Text='<%# Bind("conformpassword") %>'></asp:TextBox>
                                     </EditItemTemplate>
                                 </asp:TemplateField>
-                                <asp:TemplateField>
+                                <asp:TemplateField HeaderText="MobileNumber">
                                     <ItemTemplate>
                                         <asp:Label ID="lblmobilenumber" runat="server" Text='<%# Bind("mobilenumber") %>'></asp:Label>
                                     </ItemTemplate>
@@ -229,23 +229,23 @@
                                         <asp:TextBox ID="txtmobilenumber" runat="server" Text='<%# Bind("mobilenumber") %>'></asp:TextBox>
                                     </EditItemTemplate>
                                 </asp:TemplateField>
-                                <asp:TemplateField>
+                                <asp:TemplateField HeaderText="Gender">
                                     <ItemTemplate>
                                         <asp:Label ID="lblgender" runat="server" Text='<%# Bind("gender") %>'></asp:Label>
                                     </ItemTemplate>
                                     <EditItemTemplate>
                                         <asp:TextBox ID="txtgender" runat="server" Text='<%# Bind("gender") %>'></asp:TextBox>
                                     </EditItemTemplate>
-                                </asp:TemplateField>
-                                <asp:TemplateField>
+                                </asp:TemplateField >
+                                <asp:TemplateField HeaderText="courses">
                                     <ItemTemplate>
                                         <asp:Label ID="lblcourses" runat="server" Text='<%# Bind("courses") %>'></asp:Label>
                                     </ItemTemplate>
                                     <EditItemTemplate>
                                         <asp:TextBox ID="txtcourses" runat="server" Text='<%# Bind("courses") %>'></asp:TextBox>
                                     </EditItemTemplate>
-                                </asp:TemplateField>
-                                <asp:TemplateField>
+                                </asp:TemplateField >
+                                <asp:TemplateField HeaderText="DOB">
                                     <ItemTemplate>
                                         <asp:Label ID="lbldob" runat="server" Text='<%# Bind("DOB") %>'></asp:Label>
                                     </ItemTemplate>

@@ -98,14 +98,9 @@ namespace LoginDetails
             string password = ((TextBox)grd.FindControl("txtpassword")).Text;
             string conformpassword = ((TextBox)grd.FindControl("txtconfrompassword")).Text;
             string mobilenumber = ((TextBox)grd.FindControl("txtmobilenumber")).Text;
-
             string gender = ((TextBox)grd.FindControl("txtgender")).Text;
             string courses = ((TextBox)grd.FindControl("txtcourses")).Text;
             string dob = ((TextBox)grd.FindControl("txtdob")).Text;
-
-
-
-
             SqlCommand cmd = new SqlCommand("update registerion set firstname=@firstname," + "lastname=@lastname," +"email=@email,"+"password=@password,"+"conformpassword=@conformpassword,"+"mobilenumber=@mobilenumber,"+"gender=@gender,"+"courses=@courses,"+"dob=@dob where uid=@uid", con);
             cmd.Parameters.AddWithValue("firstname", firstname);
             cmd.Parameters.AddWithValue("lastname", lastname);
@@ -116,11 +111,6 @@ namespace LoginDetails
             cmd.Parameters.AddWithValue("gender", gender);
             cmd.Parameters.AddWithValue("courses", courses);
             cmd.Parameters.AddWithValue("dob", dob);
-
-
-
-
-
             cmd.Parameters.AddWithValue("uid", uid);
             cmd.ExecuteNonQuery();
             con.Close();
