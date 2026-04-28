@@ -178,9 +178,106 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:DataGrid ID="grddata" runat="server" ></asp:DataGrid>
+                        <asp:GridView ID="grdview" runat="server" AllowPaging="true" PageSize="5" DataKeyNames="uid" AutoGenerateColumns="false" OnPageIndexChanging="grdview_PageIndexChanging" OnRowEditing="grdview_RowEditing" OnRowCancelingEdit="grdview_RowCancelingEdit" OnRowUpdating="grdview_RowUpdating" OnRowDeleting="grdview_RowDeleting">
+                            <Columns>
+                                <asp:TemplateField>
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblfirstname" runat="server" Text='<%# Bind("firstname") %>'></asp:Label>
+                                    </ItemTemplate>
+                                    <EditItemTemplate>
+                                        <asp:TextBox ID="txtusername" runat="server" Text='<%# Bind("firstname") %>'></asp:TextBox>
+                                    </EditItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField>
+                                    <ItemTemplate>
+                                        <asp:Label ID="lbllastname" runat="server" Text='<%# Bind("lastname") %>'></asp:Label>
+                                    </ItemTemplate>
+                                    <EditItemTemplate>
+                                          <asp:TextBox ID="txtlastname" runat="server" Text='<%# Bind("lastname") %>'></asp:TextBox>
+
+                                    </EditItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField>
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblemail" runat="server" Text='<%# Bind("email") %>'></asp:Label>
+                                    </ItemTemplate>
+                                    <EditItemTemplate>
+                                        <asp:TextBox ID="txtemail" runat="server" Text='<%# Bind("email") %>'></asp:TextBox>
+                                    </EditItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField>
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblpassword" runat="server" Text='<%# Bind("password") %>'></asp:Label>
+                                    </ItemTemplate>
+                                    <EditItemTemplate>
+                                        <asp:TextBox ID="txtpassword" runat="server" Text='<%# Bind("password") %>'></asp:TextBox>
+                                    </EditItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField>
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblconformpasswoed" runat="server" Text='<%# Bind("conformpassword") %>'></asp:Label>
+                                    </ItemTemplate>
+                                    <EditItemTemplate>
+                                        <asp:TextBox ID="txtconfrompassword" runat="server" Text='<%# Bind("conformpassword") %>'></asp:TextBox>
+                                    </EditItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField>
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblmobilenumber" runat="server" Text='<%# Bind("mobilenumber") %>'></asp:Label>
+                                    </ItemTemplate>
+                                    <EditItemTemplate>
+                                        <asp:TextBox ID="txtmobilenumber" runat="server" Text='<%# Bind("mobilenumber") %>'></asp:TextBox>
+                                    </EditItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField>
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblgender" runat="server" Text='<%# Bind("gender") %>'></asp:Label>
+                                    </ItemTemplate>
+                                    <EditItemTemplate>
+                                        <asp:TextBox ID="txtgender" runat="server" Text='<%# Bind("gender") %>'></asp:TextBox>
+                                    </EditItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField>
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblcourses" runat="server" Text='<%# Bind("courses") %>'></asp:Label>
+                                    </ItemTemplate>
+                                    <EditItemTemplate>
+                                        <asp:TextBox ID="txtcourses" runat="server" Text='<%# Bind("courses") %>'></asp:TextBox>
+                                    </EditItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField>
+                                    <ItemTemplate>
+                                        <asp:Label ID="lbldob" runat="server" Text='<%# Bind("DOB") %>'></asp:Label>
+                                    </ItemTemplate>
+                                    <EditItemTemplate>
+                                        <asp:TextBox ID="txtdob" runat="server" Text='<%# Bind("DOB") %>'></asp:TextBox>
+                                    </EditItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField>
+                                    <ItemTemplate>
+                                        <asp:Button ID="btnedit" runat="server" Text="edit" CommandName="edit" />
+                                        <asp:Button ID="btndelete" runat="server" Text="delete" CommandName="delete" />
+                                    </ItemTemplate>
+                                    <EditItemTemplate>
+                                        <asp:Button ID="btnupdate" runat="server" Text="update" CommandName="update" />
+                                        <asp:Button ID="btncancel" runat="server" Text="cancel" CommandName="cancel" />
+                                    </EditItemTemplate>
+                                </asp:TemplateField>
+                                    
+
+
+
+                            </Columns>
+
+
+
+
+                        </asp:GridView>
+                    </td>
+                    <td>
                     </td>
                 </tr>
+
             </table>
         </div>
     </form>
